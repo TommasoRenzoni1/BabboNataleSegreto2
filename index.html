@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votazione</title>
+</head>
+<body>
+    <h1>Chi hai estratto?</h1>
+    <p>Benvenuto! Stiamo cercando di risolvere un problema di estrazione. Scusateci per il disagio, e per il design minimalista!</p>
+    <p>Se selezioni la persona che è stata estratta due volte, verrai reindirizzato al sito del babbo natale segreto originale, dove nel database c'è il nome della persona estratta due volte e la persona che è rimasta fuori. Altrimenti, non devi fare nulla.</p>
+    
+    <form id="voteForm">
+        <label>
+            <input type="radio" name="person" value="niccolo"> Niccolò
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="tommaso"> Tommaso
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="luca"> Luca
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="laura"> Laura
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="giulia"> Giulia
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="marta"> Marta
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="mariasole"> Mariasole
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="matilde"> Matilde
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="person" value="annalia"> Annalia
+        </label>
+        <br><br>
+        <button type="submit">Invia</button>
+    </form>
+
+    <script>
+        document.getElementById("voteForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impedisce l'invio standard del form
+
+            // Ottieni la persona selezionata
+            const selectedPerson = document.querySelector('input[name="person"]:checked').value;
+
+            // Reindirizzamento o messaggio
+            if (selectedPerson === "niccolo") {
+                window.location.href = "index1.html"; // Cambia con il link corretto
+            } else {
+                alert("Grazie! Il tuo lavoro è terminato e non devi fare nient'altro. Per fortuna " + selectedPerson + " non è la persona che è stata votata due volte.");
+                document.body.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>

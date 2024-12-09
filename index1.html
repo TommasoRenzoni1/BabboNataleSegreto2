@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babbo Natale Segreto</title>
+    <script type="module" src="./script.js"></script>
+    <link rel="icon" type="image/x-icon" href="media/favicon-96x96.png">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+
+    <div>
+        <h1>Babbo Natale Segreto</h1>
+        <p id="instructions">
+            Se stai vedendo questa pagina, è perché <span>hai estratto Niccolò.</span> La persona che è rimasta fuori è Giulia, quindi
+            devi estrarre uno dei due nomi per scoprire se devi fare il regalo a Giulia o se rimane confermato Niccolò.
+        </p>
+    
+        <br>
+        <p id="instructions">
+            Appena hai estratto, vai al seguente link perché non ho la più pallida fottuta idea di come sia possibile che Niccolò sia stato
+            estratto due volte. <a href="https://forms.gle/dm3mEaE9mW55s9dM6" target="_blank">https://forms.gle/dm3mEaE9mW55s9dM6</a> Vota nel form chi hai estratto così sono sicuro che tutti abbiano il regalo. Buona giornata.
+        </p>
+    </div>
+
+    
+    
+    <div class="typewriter">
+        <div>
+            <audio id="typingSound" src="media/typewriter.mp3" preload="auto"></audio>
+
+            <p> I partecipanti sono </p>
+            <div class ="fade">
+                <ul>
+                    <li> Niccolo </li>
+                    <li> Giulia </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <button class ="fade" id="removeButton" onclick="playAmogus()" >Estrai Nome</button>
+    <audio id="amogus" src="media/Vine Boom sound effect.mp3"></audio>
+    <script>
+        function playAmogus(){
+            let audioAmogus = document.getElementById("amogus");
+            if (audioAmogus){
+                audioAmogus.play();
+            } else{
+                console.error("Amogus not found!");
+            }
+        }
+    </script>
+
+    <div id = "creepy">
+        <img src="media/creepysnowman.jpg" width=270px>
+    </div>
+
+
+    <p class= "fade" id="message"></p>
+
+
+    <p id="bye"></p>
+    
+</body>
+
+</html>
